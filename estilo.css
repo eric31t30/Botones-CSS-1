@@ -1,0 +1,579 @@
+/* Fuente de uso en algun boton */
+/* Source of use in any button */
+@import url('https://fonts.cdnfonts.com/css/sf-intermosaic');
+
+
+
+
+/* Diseños basicos para la pagina y contenedores */
+/* Basic designs for the page and containers */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #151E3F;
+    user-select: none;
+}
+
+
+body{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* Diseño para la scrollbar */
+/* Design for the scrollbar */
+
+body::-webkit-scrollbar{
+    width: 15px;
+    transition: all 2s ease;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #ffffff19;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: #d596ef2a;
+}
+
+:root{
+    --color-fondo: #151E3F;
+}
+
+
+
+.contenedor{
+    position: relative;
+    display: flex;
+    height: 100%;
+    gap: 100px 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+
+.btn{
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 10px;
+    text-indent: 10px;
+    z-index: 2;
+    touch-action: none;
+    background: none;
+}
+
+
+.decoracion-pagina{
+    position: absolute;
+    z-index: 0;
+    filter: blur(20px);
+    pointer-events: none;
+    opacity: .4;
+}
+
+.decoracion-pagina-1{
+    width: 300px;
+    height: 300px;
+    background: rgb(32,224,213);
+    background: linear-gradient(90deg, rgba(32,224,213,1) 0%,
+    rgba(21,196,247,1) 50%, rgba(69,252,109,1) 100%);
+    border-radius: 100px;
+    transform: rotate(45deg);
+    left: 10px;
+    top: 1px;
+}
+
+
+.decoracion-pagina-2{
+    width: 200px;
+    height: 200px;
+    background: rgb(176,88,231);
+    background: linear-gradient(90deg, rgba(176,88,231,1) 0%
+    , rgba(232,55,136,1) 50%, rgba(249,213,80,1) 100%);
+    border-radius: 50%;
+    transform: rotate(45deg);
+    left: 1100px;
+    top: 90px;
+}
+
+.decoracion-pagina-3{
+    width: 350px;
+    height: 350px;
+    background: rgb(199,116,168);
+    background: linear-gradient(90deg, rgba(199,116,168,1) 0%,
+    rgba(137,82,255,1) 50%, rgba(60,246,12,1) 100%);
+    border-radius: 50px;
+    transform: rotate(69deg);
+    left: 300px;
+    top: 450px;
+}
+
+
+/* Diseños de los botones y con su enumeracion */
+/* Button designs and their enumeration */
+
+
+/* boton 1 */
+
+.btn-1{
+    overflow: hidden;
+    border: 3px solid #03cc57;
+    z-index: 2;
+}
+
+
+.btn-1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #03cc57;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn-1:hover:before{
+    top: 0;
+    border-radius: 0%;
+}
+
+
+/* boton 2 */
+
+.btn-2{
+    transition: all 0.6s ease;
+}
+
+.btn-2::after{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 110%;
+    left: -10%;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    background-color: #ffffff;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.btn-2::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    border: 3px solid #03cc57;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-2:hover::after{
+    background-color: #ffffff31;
+    transform: skew(20deg, 0deg) translateX(240px);
+}
+
+.btn-2:hover::before{
+    background-color: #03cc57;
+    border: 3px solid #029740;
+    transform: skew(20deg, 0deg) scale(1.1);
+}
+
+
+/* boton 3 */
+
+.btn-3:hover{
+    color: #fff;
+    text-shadow: 0px 0px 20px white;
+    transition: all 0.6s ease;
+}
+
+.btn-3 span:nth-child(n){
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid ;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+}
+
+.btn-3 span:nth-child(1){
+    right: 10%;
+    top: -5px;
+}
+
+.btn-3 span:nth-child(2){
+    left: 10%;
+    bottom: -5px;
+}
+
+.btn-3:hover span:nth-child(1){
+    right: 80%;
+    transform: rotate(90deg);
+    color: white;
+    box-shadow: 0px 0px 40px white,0px 0px 40px white;
+    background-color: #fff;
+}
+
+.btn-3:hover span:nth-child(2){
+    left: 80%;
+    transform: rotate(90deg);
+    color: white;
+    box-shadow: 0px 0px 40px white,0px 0px 40px white;
+    background-color: #fff;
+}
+
+
+.btn-3:not(:hover){
+    color: #848484;
+    transition: all .6s ease;
+}
+
+
+/* boton 4 */
+
+.btn-4{
+    background-color: #e8e8e8;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 50px;
+    text-align: center;
+    outline: 2px solid #e8e8e8;
+    outline-offset: 4px;
+    transition: all .2s ease-in-out;
+}
+
+
+.btn-4:hover{
+    outline: 2px solid #e8e8e8;
+    outline-offset: 10px;
+    transform: scale(1.1);
+
+}
+
+/* boton 5 */
+
+.btn-5{
+    background-color: #029740;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+
+.btn-5 span{
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgba(51, 255, 139, .5);
+    top: -50%;
+    left: -100%;
+    transition: all .5s ease;
+}
+
+
+.btn-5:hover span{
+    left: -10%;
+    z-index: -1;
+}
+
+
+/* boton 6 */
+
+
+.btn-6{
+    border: 2px solid rgb(31, 24, 24);
+    color: rgb(83, 83, 83);
+    transition: all .5s ease;
+}
+
+
+.btn-6:hover{
+    border: 2px solid rgb(242, 62, 22);;
+    box-shadow: 0 0 40px red, inset 0 0 40px red;
+    color: rgb(237, 69, 13);
+    text-shadow: 0 0 10px red,0 0 30px red,0 0 70px red;
+}
+
+
+
+/* boton-7 */
+
+.btn-7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(224, 224, 224);
+    transition: all .3s ease;
+}
+
+
+.btn-7::after,
+.btn-7::before{
+    content: '';
+    width: 5%;
+    height: 15%;
+    position: absolute;
+    transition: all .4s ease-in-out;
+}
+
+
+.btn-7::after{
+    top: 0;
+    border-top: 2px solid white;
+    right: 0;
+    border-right: 2px solid white;
+    
+}
+
+
+
+.btn-7::before{
+    bottom: 0;
+    border-bottom: 2px solid white;
+    left: 0;
+    border-left: 2px solid white;
+}
+
+
+.btn-7:hover::after,
+.btn-7:hover::before{
+    width: 99%;
+    height: 95%;
+    
+}
+
+.btn-7:hover{
+    color: white;
+}
+
+
+/* boton 8 */
+
+
+.btn-8{
+    background-image: url(imagenes/bandera\ gif\ x4.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -5px 0px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-8-le1,
+.btn-8-le2,
+.btn-8-le3,
+.btn-8-le4,
+.btn-8-le5{
+    font-family: 'SF Intermosaic', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    background: none;
+}
+
+.btn-8:hover .btn-8-le1,
+.btn-8:hover .btn-8-le2,
+.btn-8:hover .btn-8-le3,
+.btn-8:hover .btn-8-le4,
+.btn-8:hover .btn-8-le5 {
+    animation: btn-8subir .2s linear ;
+}
+
+
+
+.btn-8:hover .btn-8-le2{
+    animation-delay: .1s;
+}
+
+.btn-8:hover .btn-8-le3{
+    animation-delay: .2s;
+}
+
+.btn-8:hover .btn-8-le4{
+    animation-delay: .4s;
+}
+
+.btn-8:hover .btn-8-le5{
+    animation-delay: .6s;
+}
+
+.btn-8::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imagenes/moneda.gif);
+    width: 16px;
+    height: 16px;
+    top: -5px;
+    right: 52px;
+    visibility: hidden;
+}
+
+
+.btn-8:hover::after{
+    animation: btn-8moneda .6s linear;
+    animation-delay: .6s;
+}
+
+@keyframes btn-8subir{
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes btn-8moneda{
+    0%{
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+      
+    
+    100%{
+        visibility: hidden;
+        transform: translateY(5px);
+    }
+}
+
+
+@media (max-width: 719px){
+
+    body{
+        overflow: auto;
+    }
+
+   .contenedor{
+        margin: 40px auto;
+   }
+
+    .decoracion-pagina-1{
+        width: 120px;
+        height: 120px;
+        left: 20px;
+        top: 100px;
+    }
+
+    .decoracion-pagina-2{
+        left: 10px;
+        top: 850px;
+    }
+
+    .decoracion-pagina-3{
+        width: 180px;
+        height: 180px;
+        left: 120px;
+        top: 450px;
+    }
+
+}
+
+@media(min-width: 720px) and (max-width:1299px){
+
+    .contenedor{
+        gap: 250px 100px;
+    }
+
+    .decoracion-pagina-1{
+        width: 240px;
+        height: 240px;
+        left: 40px;
+        top: 20px;
+    }
+
+    .decoracion-pagina-2{
+        left: 370px;
+        top: 400px;
+    }
+
+    .decoracion-pagina-3{
+        width: 300px;
+        height: 300px;
+        left: 100px;
+        top: 1000px;
+    }
+}
+
+@media(min-width: 1300px) and (max-width: 1919px){
+
+    .contenedor{
+        gap: 250px 100px;
+    }
+
+    .decoracion-pagina-1{
+        width: 240px;
+        height: 240px;
+        left: 60px;
+        top: 60px;
+    }
+
+    .decoracion-pagina-2{
+        left: 1000px;
+        top: 200px;
+    }
+
+    .decoracion-pagina-3{
+        width: 300px;
+        height: 300px;
+        left: 500px;
+        top: 400px;
+    }
+
+
+}
+
+@media (min-width: 1920px){
+
+    .contenedor{
+        gap: 260px 350px;
+        margin: auto 50px;
+    }
+
+
+    .decoracion-pagina-1{
+        left: 300px;
+    }
+    
+    .decoracion-pagina-2{
+        left: auto;
+        right: 200px;
+        top: 300px;
+    }
+    
+    .decoracion-pagina-3{
+        left: 900px;
+        top: 700px;
+    }
+    
+}
+
